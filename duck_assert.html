@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.litecart.net/" />
+<title>duck_assert</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">duck_assert</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>//div[@id='box-most-popular']/div/ul/li[3]/a@href</td>
+	<td>http://demo.litecart.net/en/rubber-ducks-c-1/rubber-duck-p-1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='box-most-popular']/div/ul/li[3]/a/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAttribute</td>
+	<td>//div[@id='box-product']/div[2]/div/a/img@title</td>
+	<td>Rubber Duck</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>css=div.buy_now input[name='quantity']</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=options[Size]</td>
+	<td>label=Medium +$2.50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@name='add_cart_product']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=a.content &gt; span.formatted_value</td>
+	<td>$20.50</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=a.content &gt; span.quantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=a.content &gt; span.formatted_value</td>
+	<td>$20.50</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='cart']/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=remove_cart_item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div#checkout-cart-wrapper &gt; p &gt; em</td>
+	<td>There are no items in your cart.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
